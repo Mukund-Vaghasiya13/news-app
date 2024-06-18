@@ -23,7 +23,9 @@ function bindData(articles) {
 
   articles.forEach((article) => {
     if (!article.urlToImage) return;
+    // console.log(newsCardTemplate.content);
     const cardClone = newsCardTemplate.content.cloneNode(true);
+    // console.log(cardClone.firstElementChild);
     fillDataInCard(cardClone, article);
     cardsContainer.appendChild(cardClone);
   });
