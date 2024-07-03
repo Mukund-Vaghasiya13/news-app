@@ -58,12 +58,14 @@ function onNavItemClick(id) {
   const navItem = document.getElementById(id);
   curSelectedNav?.classList.remove("active");
   curSelectedNav = navItem;
+  //console.log(curSelectedNav)
   curSelectedNav.classList.add("active");
 }
 
 const searchButton = document.getElementById("search-button");
 const searchText = document.getElementById("search-text");
 
+// SearchButton Action Controller
 searchButton.addEventListener("click", () => {
   const query = searchText.value;
   if (!query) return;
